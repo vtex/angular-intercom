@@ -13,7 +13,7 @@ Intercom wrapper for Angular
 angular.module 'yourApp', ['vtex.intercom']
 ```
 
-### Fill intercomConfig
+### Fill `intercomConfig`
 This object should contain at least your Intercom application credentials (`app_id`) and main user data, such as name, email, age, etc.
 
 ```coffeescript
@@ -47,6 +47,13 @@ Example:
 <button id="sign-up" class="btn btn-primary" value="Sign Up"
 				intercom-event="Sign The Duck Up"></button>
 ```
+
+### API `intercomService`
+#### trigger eventName, data
+- string `eventName`, Object `data` with any information you want to be registered within the event
+
+#### updateUser data
+- Object `data` with new (full or partial) user data to be updated and send
 
 ### Development
 Inside `src` you can find this module source code, written in **CoffeeScript**. To build the `.js` and uglify it, install npm dev-dependencies and run grunt:
